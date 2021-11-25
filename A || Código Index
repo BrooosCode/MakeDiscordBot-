@@ -8,7 +8,9 @@ const { Client, MessageEmbed, Guild } = require('discord.js');
 
 require('dotenv').config();
 
-client.on('message', (message) => { //Abrimos una llave para que nuestro bot pueda hablar// let prefix = '!' //Debemos añadirle el prefijo que queremos para que el bot pueda ejecutar el comando, en mi caso he puesto un ''!''.//
+client.on('message', (message) => { //Abrimos una llave para que nuestro bot pueda hablar// 
+
+let prefix = '!' //Debemos añadirle el prefijo que queremos para que el bot pueda ejecutar el comando, en mi caso he puesto un ''!''.//
 
 if(message.author.bot) return; //Con esto estamos haciendo que nuestro bot no ejecute su comando si se lo dice otro bot.//
 
