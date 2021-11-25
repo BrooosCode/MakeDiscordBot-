@@ -1,0 +1,34 @@
+//Debes ponerlo en el "index.js" casi al principio//
+const fs = require('fs')
+let { readdirSync } = require('fs') 
+
+client.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync('./comandos').filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+  const command = require(`./comandos/${file}`);
+  client.commands.set(command.name, command);
+}
+
+//Debes ponerlo en el "index.js" casi al final// 
+ 
+  let cmd = client.commands.find((c) => c.name === command || c.alias && c.alias.includes(command));
+  if(cmd){
+    cmd.execute(client, message, args)
+  }
+
+//Debes crear una carpeta que ponga "comandos.js" y otro archivo que se llame "handler.js" para guardar esta estructura//
+
+const Discord = require('discord.js');
+
+module.exports = {
+  name: "", 
+  alias: [""], 
+
+execute (client, message, args){
+
+  
+
+ }
+
+} 
