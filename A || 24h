@@ -1,0 +1,19 @@
+//Primero hay que definir esto en el index.js//
+
+const keepAlive = require('./server.js');
+const express = require("express")().get("/", (req,res)=>res.send("Bot en Linea!")).listen(3000)
+
+//Tienes que crear un archivo que se llame server.js y pegar lo siguiente//
+
+const express = require('express')
+const server = express();
+ 
+server.all('/', (req, res) => {
+    res.send('xd');
+});
+ 
+function keepAlive() {
+   server.listen(3000, () => { console.log("Si" + Date.now()) });
+}
+
+module.exports = keepAlive;
