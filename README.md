@@ -1,7 +1,12 @@
+|| Código INDEX
+
 
 const Discord = require('discord.js') //Descargamos el paquete ''discord.js''//
+
 const client = new Discord.Client() //Definimos el bot para poder loguearnos con él//
+
 const { Client, MessageEmbed, Guild } = require('discord.js');
+
 require('dotenv').config();
 
 
